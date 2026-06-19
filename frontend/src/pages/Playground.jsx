@@ -227,7 +227,7 @@ export default function Playground() {
     formData.append('file', f)
 
     try {
-      const { data } = await axios.post('${API_BASE}/api/analyze', formData, {
+      const { data } = await axios.post(`${API_BASE}/api/analyze`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
         timeout: 60000
       })
