@@ -232,6 +232,7 @@ export default function Playground() {
         timeout: 60000
       })
       setResult(data)
+      alert(JSON.stringify(data).slice(0,500));
       setActiveTab('overview')
     } catch (err) {
       setError(err.response?.data?.error || 'Analysis failed. Check the backend is running.')
